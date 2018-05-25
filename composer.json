@@ -14,8 +14,8 @@
     },
     "autoload": {
         "psr-4": {
-            "nobita0311\\Csvconv\\": "src/",
-            "nobita0311\\CsvconvTest\\": "tests/"
+            "nobita0311\\CSVConv\\": "src/",
+            "nobita0311\\CSVConvTest\\": "tests/"
         }
     },
     "scripts": {
