@@ -19,6 +19,9 @@
         }
     },
     "scripts": {
+        "dl": [
+            "composer dumpautoload"
+        ],
         "test": [
             "vendor/bin/phpunit"
         ],
