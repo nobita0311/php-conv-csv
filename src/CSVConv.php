@@ -56,11 +56,11 @@ class CSVConv {
         return $array;
     }
 
-    public function toHTML() {
+    public function toHTML($setting = null) {
 
         $array = $this->toArray();
 
-        $html = new HTML($array);
+        $html = new HTML($setting);
 
         return $html->conv($array);
     }

@@ -10,8 +10,11 @@ class HTML {
 
 //    private $template;
 
-    function __construct($setting) {
+    function __construct($setting = null) {
         $this->setting = $setting;
+        if (isset($setting["use_header"])) {
+            $this->use_header = $setting["use_header"];
+        }
     }
 
     function conv($csv) {
@@ -29,7 +32,7 @@ class HTML {
                 $html .= '</tr>';
                 $html .= '</thead>';
             } else {
-                if ($key == 1) {
+                if (($this->use_header && $key == 1) || (!$this->use_header && !$key)) {
                     $html .= '<tbody>';
                 }
                 $html .= '<tr>';

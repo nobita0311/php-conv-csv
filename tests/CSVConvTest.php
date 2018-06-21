@@ -39,6 +39,17 @@ class CSVConvTest extends \PHPUnit_Framework_TestCase {
                 . '</table>'
         ;
         $this->assertEquals($html, $eq);
+        $html = $this->CSVConv->toHTML(array("use_header" => false));
+
+        $eq = '<table>'
+                . '<tbody>'
+                . '<tr><td>1</td><td>2</td><td>3</td></tr>'
+                . '<tr><td>a</td><td>b</td><td>c</td></tr>'
+                . '<tr><td>4</td><td>5</td><td>6</td></tr>'
+                . '</tbody>'
+                . '</table>'
+        ;
+        $this->assertEquals($html, $eq);
     }
 
 }
