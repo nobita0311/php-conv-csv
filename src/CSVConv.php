@@ -43,7 +43,7 @@ class CSVConv {
         return $flg;
     }
 
-    private function csv() {
+    public function toArray() {
         $file = 'php://memory';
         $obj = new \SplFileObject($file, 'w+');
         $obj->fwrite($this->csv);
@@ -58,7 +58,7 @@ class CSVConv {
 
     public function toHTML() {
 
-        $array = $this->csv($this->csv);
+        $array = $this->toArray();
 
         $html = new HTML($array);
 
